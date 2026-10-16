@@ -1,0 +1,172 @@
+:host {
+  display: block;
+}
+
+.services-intro {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: clamp(4rem, 8vw, 7rem) 1.5rem 3rem;
+  text-align: center;
+}
+
+.services-intro h1 {
+  max-width: 54rem;
+  margin: 0.8rem auto 1rem;
+  font-family: Georgia, serif;
+  font-size: clamp(2.7rem, 6vw, 5.2rem);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 1.02;
+}
+
+.services-intro > p:last-child {
+  max-width: 44rem;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.initiative-section {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 77rem;
+  margin: 0 auto;
+  padding: 1rem clamp(1.25rem, 7vw, 6rem) clamp(4rem, 8vw, 7rem);
+}
+
+.initiative-card {
+  position: relative;
+  min-height: 19rem;
+  padding: 1.7rem;
+  border: 1px solid var(--line);
+  background: #fffdf8;
+}
+
+.initiative-icon {
+  display: grid;
+  width: 3.5rem;
+  aspect-ratio: 1;
+  margin-bottom: 1.5rem;
+  place-items: center;
+  border-radius: 50%;
+  font-family: Georgia, serif;
+  font-size: 1.6rem;
+}
+
+.icon-sage {
+  background: #e5eadf;
+  color: #51644f;
+}
+
+.icon-ochre {
+  background: #f3e5bd;
+  color: #916a1a;
+}
+
+.icon-rose {
+  background: #f0dfdc;
+  color: #873b36;
+}
+
+.icon-blue {
+  background: #e0e9eb;
+  color: #49656c;
+}
+
+.initiative-card .eyebrow {
+  font-size: 0.65rem;
+}
+
+.initiative-card h2 {
+  margin: 0.55rem 0;
+  font-family: Georgia, serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 400;
+}
+
+.initiative-card > p:not(.eyebrow) {
+  max-width: 30rem;
+  margin: 0 0 1.3rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.initiative-card .text-link {
+  font-size: 0.83rem;
+}
+
+.approach-band {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 3rem;
+  padding: clamp(3.5rem, 7vw, 6rem) clamp(1.5rem, 10vw, 10rem);
+  background: var(--sage);
+  color: white;
+}
+
+.approach-band .eyebrow {
+  color: #f2d47b;
+}
+
+.approach-band h2 {
+  max-width: 43rem;
+  margin: 0.8rem 0 0;
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 4.3vw, 3.7rem);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.1;
+}
+
+.approach-list p {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 0;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  font-family: Georgia, serif;
+  font-size: 1.15rem;
+}
+
+.approach-list span {
+  color: #f2d47b;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 0.75rem;
+}
+
+.page-cta {
+  display: grid;
+  justify-items: center;
+  padding: clamp(4rem, 8vw, 6rem) 1.5rem;
+  text-align: center;
+}
+
+.page-cta h2 {
+  max-width: 42rem;
+  margin: 0.75rem 0 1.5rem;
+  font-family: Georgia, serif;
+  font-size: clamp(2.1rem, 4.5vw, 3.5rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+@media (max-width: 52rem) {
+  .approach-band {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 38rem) {
+  .initiative-section {
+    grid-template-columns: 1fr;
+  }
+
+  .initiative-card {
+    min-height: 0;
+  }
+}

@@ -1,0 +1,246 @@
+:host {
+  display: block;
+}
+
+.donate-hero {
+  position: relative;
+  display: flex;
+  min-height: clamp(30rem, 62vw, 43rem);
+  align-items: center;
+  overflow: hidden;
+  background: #39372f;
+  color: white;
+}
+
+.donate-hero > img,
+.donate-shade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.donate-hero > img {
+  object-fit: cover;
+}
+
+.donate-shade {
+  background: linear-gradient(90deg, rgba(27, 26, 22, 0.8), rgba(27, 26, 22, 0.12));
+}
+
+.donate-hero-copy {
+  position: relative;
+  width: min(100%, 80rem);
+  margin: 0 auto;
+  padding: clamp(4rem, 8vw, 7rem) clamp(1.5rem, 9vw, 8rem);
+}
+
+.donate-hero-copy .eyebrow {
+  color: #f2d47b;
+}
+
+.donate-hero h1 {
+  max-width: 53rem;
+  margin: 0.9rem 0;
+  font-family: Georgia, serif;
+  font-size: clamp(2.8rem, 7vw, 5.8rem);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 1.02;
+}
+
+.donate-hero-copy > p:not(.eyebrow) {
+  max-width: 38rem;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.donate-hero-button {
+  margin-top: 1rem;
+  border-color: #efcb68;
+  background: #efcb68;
+  color: var(--ink);
+}
+
+.donate-hero-button:hover {
+  border-color: #f5dda0;
+  background: #f5dda0;
+}
+
+.ways-section {
+  padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 7vw, 6rem);
+}
+
+.ways-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  max-width: 76rem;
+  margin: 0 auto;
+}
+
+.way-card {
+  padding: 1.6rem;
+  border: 1px solid var(--line);
+  background: #fffdf8;
+}
+
+.way-card > span {
+  color: var(--wine);
+  font-family: Georgia, serif;
+}
+
+.way-card h3 {
+  margin: 1.2rem 0 0.6rem;
+  font-family: Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.way-card p {
+  min-height: 4rem;
+  margin: 0 0 1.3rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.way-card .text-link {
+  font-size: 0.83rem;
+}
+
+.online-giving {
+  padding: 0 clamp(1.25rem, 7vw, 6rem) clamp(3rem, 6vw, 5rem);
+}
+
+.online-giving-card {
+  display: flex;
+  max-width: 76rem;
+  margin: 0 auto;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  border: 1px solid var(--line);
+  background: #fffdf8;
+}
+
+.online-giving-copy {
+  max-width: 43rem;
+}
+
+.online-giving-copy .eyebrow {
+  margin: 0 0 0.65rem;
+  color: var(--wine);
+}
+
+.online-giving-copy h2 {
+  margin: 0 0 0.65rem;
+  font-family: Georgia, serif;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.online-giving-copy > p:last-child {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.payment-status {
+  flex: 0 0 auto;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid #e4d5ad;
+  border-radius: 999px;
+  background: #f5efdf;
+  color: #514b3d;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.donation-notice {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  max-width: 68rem;
+  margin: 0 auto clamp(4rem, 8vw, 7rem);
+  padding: 1.2rem 1.4rem;
+  border: 1px solid #e4d5ad;
+  background: #f5efdf;
+}
+
+.notice-icon {
+  display: grid;
+  width: 1.5rem;
+  flex: 0 0 1.5rem;
+  aspect-ratio: 1;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--saffron);
+  font-family: Georgia, serif;
+  font-weight: 700;
+}
+
+.donation-notice p {
+  margin: 0;
+  color: #514b3d;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.donate-closing {
+  display: grid;
+  justify-items: center;
+  padding: clamp(4rem, 8vw, 6rem) 1.5rem;
+  background: var(--sage);
+  color: white;
+  text-align: center;
+}
+
+.donate-closing .eyebrow {
+  color: #f2d47b;
+}
+
+.donate-closing h2 {
+  max-width: 44rem;
+  margin: 0.8rem 0 1.5rem;
+  font-family: Georgia, serif;
+  font-size: clamp(2.1rem, 4.5vw, 3.8rem);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+}
+
+@media (max-width: 50rem) {
+  .ways-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .donation-notice {
+    margin-inline: 1.25rem;
+  }
+
+  .online-giving-card {
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 38rem) {
+  .donate-hero {
+    min-height: 36rem;
+  }
+
+  .ways-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .way-card p {
+    min-height: 0;
+  }
+
+  .online-giving-card {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+}

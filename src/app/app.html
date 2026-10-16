@@ -1,0 +1,55 @@
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<div class="announcement">
+  <p>Communities are stronger when everyone can take part.</p>
+  <a routerLink="/donate">Stand with a community <span aria-hidden="true">↗</span></a>
+</div>
+
+<header class="site-header">
+  <a class="site-brand" routerLink="/home" aria-label="RRNGO home">
+    <span class="brand-mark" aria-hidden="true">R</span>
+    <span class="brand-copy"><strong>RRNGO</strong><small>Rooted in community</small></span>
+  </a>
+
+  <nav aria-label="Main navigation">
+    <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
+    <a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">Our story</a>
+    <a routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Our work</a>
+    <a routerLink="/gallery" routerLinkActive="active" ariaCurrentWhenActive="page">Stories</a>
+    <a routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contact</a>
+  </nav>
+
+  <a class="button button-small header-cta" routerLink="/donate">Give with care <span aria-hidden="true">↗</span></a>
+</header>
+
+<main id="main-content">
+  <router-outlet />
+</main>
+
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a class="site-brand" routerLink="/home" aria-label="RRNGO home">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span class="brand-copy"><strong>RRNGO</strong><small>Rooted in community</small></span>
+      </a>
+      <p>Working alongside communities for a more caring, resilient future.</p>
+    </div>
+    <div class="footer-links">
+      <h2>Explore</h2>
+      <a routerLink="/about">Our story</a>
+      <a routerLink="/services">Our work</a>
+      <a routerLink="/gallery">Stories</a>
+      <a routerLink="/contact">Contact</a>
+    </div>
+    <div class="footer-invite">
+      <p class="eyebrow">A better future is shared</p>
+      <h2>Be part of what comes next.</h2>
+      <a class="text-link" routerLink="/donate">Find a way to help <span aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 RRNGO. All rights reserved.</span>
+    <span>Made for people, with people.</span>
+  </div>
+</footer>

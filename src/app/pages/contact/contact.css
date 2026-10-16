@@ -1,0 +1,144 @@
+:host {
+  display: block;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
+  gap: clamp(2rem, 7vw, 6rem);
+  max-width: 82rem;
+  margin: 0 auto;
+  padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 7vw, 6rem);
+}
+
+.contact-copy h1 {
+  max-width: 44rem;
+  margin: 0.8rem 0 1.2rem;
+  font-family: Georgia, serif;
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 1.02;
+}
+
+.contact-lead {
+  max-width: 39rem;
+  margin: 0 0 2rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.contact-image {
+  min-height: 25rem;
+  background: var(--soft-sage);
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 25rem;
+  object-fit: cover;
+}
+
+.contact-panel {
+  align-self: center;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  background: #f0ece2;
+}
+
+.contact-panel h2 {
+  margin: 0.6rem 0 1.25rem;
+  font-family: Georgia, serif;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.contact-option {
+  display: grid;
+  grid-template-columns: 2rem 1fr;
+  gap: 0.8rem;
+  padding: 1.1rem 0;
+  border-top: 1px solid #d8d0c1;
+}
+
+.contact-option > span {
+  color: var(--wine);
+  font-size: 0.73rem;
+}
+
+.contact-option h3 {
+  margin: 0 0 0.25rem;
+  font-family: Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+.contact-option p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.6;
+}
+
+.contact-details-note {
+  margin: 0.75rem 0 1.25rem;
+  padding: 1rem;
+  border-left: 3px solid var(--saffron);
+  background: #faf7f0;
+}
+
+.contact-details-note strong {
+  font-size: 0.85rem;
+}
+
+.contact-details-note p {
+  margin: 0.4rem 0 0;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.contact-bottom {
+  display: grid;
+  justify-items: center;
+  padding: clamp(3.5rem, 7vw, 5rem) 1.5rem;
+  background: var(--sage);
+  color: white;
+  text-align: center;
+}
+
+.contact-bottom .eyebrow {
+  color: #f2d47b;
+}
+
+.contact-bottom h2 {
+  margin: 0.75rem 0;
+  font-family: Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 400;
+}
+
+.contact-bottom > p:last-child {
+  max-width: 39rem;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  line-height: 1.7;
+}
+
+@media (max-width: 52rem) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-panel {
+    max-width: 40rem;
+  }
+}
+
+@media (max-width: 38rem) {
+  .contact-image,
+  .contact-image img {
+    min-height: 18rem;
+  }
+}
