@@ -83,7 +83,15 @@
 .way-card {
   padding: 1.6rem;
   border: 1px solid var(--line);
-  background: #fffdf8;
+  border-radius: var(--card-radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.way-card:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 1.1rem 2.4rem rgba(47, 41, 31, 0.12);
 }
 
 .way-card > span {
@@ -122,7 +130,9 @@
   justify-content: space-between;
   gap: 2rem;
   border: 1px solid var(--line);
-  background: #fffdf8;
+  border-radius: var(--card-radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
 }
 
 .online-giving-copy {

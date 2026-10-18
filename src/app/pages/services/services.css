@@ -41,7 +41,15 @@
   min-height: 19rem;
   padding: 1.7rem;
   border: 1px solid var(--line);
-  background: #fffdf8;
+  border-radius: var(--card-radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.initiative-card:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 1.1rem 2.4rem rgba(47, 41, 31, 0.12);
 }
 
 .initiative-icon {

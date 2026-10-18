@@ -34,4 +34,27 @@ describe('App', () => {
       expect(compiled.querySelector('main h1')?.textContent).toContain(title);
     }
   }, 15000);
+
+  it('should toggle the responsive navigation menu', () => {
+    const fixture = TestBed.createComponent(App);
+    fixture.detectChanges();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    const menuButton = compiled.querySelector<HTMLButtonElement>('.menu-toggle');
+    const navigation = compiled.querySelector<HTMLElement>('#main-navigation');
+
+    expect(menuButton).not.toBeNull();
+    expect(navigation).not.toBeNull();
+    expect(menuButton?.getAttribute('aria-expanded')).toBe('false');
+
+    menuButton?.click();
+    fixture.detectChanges();
+    expect(menuButton?.getAttribute('aria-expanded')).toBe('true');
+    expect(navigation?.classList.contains('is-open')).toBe(true);
+
+    menuButton?.click();
+    fixture.detectChanges();
+    expect(menuButton?.getAttribute('aria-expanded')).toBe('false');
+    expect(navigation?.classList.contains('is-open')).toBe(false);
+  });
 });

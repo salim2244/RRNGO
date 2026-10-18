@@ -41,6 +41,7 @@
   min-width: 0;
   margin: 0;
   overflow: hidden;
+  border-radius: 0.75rem;
   background: #e8e3d9;
 }
 

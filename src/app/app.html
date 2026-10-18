@@ -1,8 +1,14 @@
 <a class="skip-link" href="#main-content">Skip to content</a>
 
+<div class="legal-strip" aria-label="Organization registration placeholders">
+  <p><span>Registration No.</span> <strong>REG-ABCD-1234</strong></p>
+  <small>Sample details — replace before publishing</small>
+  <p><span>PAN</span> <strong>PAN-ABCD-1234</strong></p>
+</div>
+
 <div class="announcement">
-  <p>Communities are stronger when everyone can take part.</p>
-  <a routerLink="/donate">Stand with a community <span aria-hidden="true">↗</span></a>
+  <p>Lasting change starts with community voices.</p>
+  <a routerLink="/contact">Volunteer with us <span aria-hidden="true">↗</span></a>
 </div>
 
 <header class="site-header">
@@ -11,7 +17,22 @@
     <span class="brand-copy"><strong>RRNGO</strong><small>Rooted in community</small></span>
   </a>
 
-  <nav aria-label="Main navigation">
+  <button
+    class="menu-toggle"
+    type="button"
+    aria-controls="main-navigation"
+    [attr.aria-expanded]="menuOpen()"
+    [attr.aria-label]="menuOpen() ? 'Close navigation menu' : 'Open navigation menu'"
+    (click)="toggleNavigation()"
+  >
+    <span aria-hidden="true">{{ menuOpen() ? 'Close' : 'Menu' }}</span>
+    <span class="menu-icon" aria-hidden="true" [class.is-open]="menuOpen()">
+      <span></span>
+      <span></span>
+    </span>
+  </button>
+
+  <nav id="main-navigation" [class.is-open]="menuOpen()" aria-label="Main navigation" (click)="closeNavigation()">
     <a routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
     <a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">Our story</a>
     <a routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Our work</a>
@@ -19,7 +40,7 @@
     <a routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contact</a>
   </nav>
 
-  <a class="button button-small header-cta" routerLink="/donate">Give with care <span aria-hidden="true">↗</span></a>
+  <a class="button button-small header-cta" routerLink="/donate">Support our work <span aria-hidden="true">↗</span></a>
 </header>
 
 <main id="main-content">
@@ -33,7 +54,7 @@
         <span class="brand-mark" aria-hidden="true">R</span>
         <span class="brand-copy"><strong>RRNGO</strong><small>Rooted in community</small></span>
       </a>
-      <p>Working alongside communities for a more caring, resilient future.</p>
+      <p>Standing alongside communities as they shape a more caring, resilient future.</p>
     </div>
     <div class="footer-links">
       <h2>Explore</h2>
@@ -43,9 +64,9 @@
       <a routerLink="/contact">Contact</a>
     </div>
     <div class="footer-invite">
-      <p class="eyebrow">A better future is shared</p>
-      <h2>Be part of what comes next.</h2>
-      <a class="text-link" routerLink="/donate">Find a way to help <span aria-hidden="true">↗</span></a>
+      <p class="eyebrow">People-powered change</p>
+      <h2>There is a place for you in this work.</h2>
+      <a class="text-link" routerLink="/contact">Volunteer or partner with us <span aria-hidden="true">↗</span></a>
     </div>
   </div>
   <div class="footer-bottom">

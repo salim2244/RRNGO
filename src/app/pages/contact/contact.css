@@ -31,7 +31,10 @@
 
 .contact-image {
   min-height: 25rem;
+  overflow: hidden;
+  border-radius: var(--card-radius);
   background: var(--soft-sage);
+  box-shadow: var(--shadow-card);
 }
 
 .contact-image img {
@@ -44,7 +47,10 @@
 .contact-panel {
   align-self: center;
   padding: clamp(1.5rem, 3vw, 2.5rem);
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius);
   background: #f0ece2;
+  box-shadow: var(--shadow-card);
 }
 
 .contact-panel h2 {

@@ -1,43 +1,84 @@
 <section class="home-hero" aria-labelledby="home-title">
-  <img
-    class="hero-image"
-    ngSrc="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=2200&q=85"
-    width="2200"
-    height="1350"
-    priority
-    alt="Community members working together outdoors"
-  />
-  <div class="hero-shade"></div>
   <div class="hero-content">
-    <p class="eyebrow">People first. Always.</p>
-    <h1 id="home-title">Change grows when we grow it <em>together.</em></h1>
+    <p class="eyebrow"><span aria-hidden="true">✳</span> A community-led nonprofit</p>
+    <h1 id="home-title">Change grows when communities lead.</h1>
     <p class="hero-copy">
-      We work alongside communities to build dignity, opportunity, and lasting change—one shared effort at a time.
+      We work alongside people to grow opportunity, wellbeing, and lasting change—shaped by the communities at its heart.
     </p>
     <div class="hero-actions">
-      <a class="button" routerLink="/services">Explore our work <span aria-hidden="true">↗</span></a>
-      <a class="button button-light" routerLink="/about">Get to know us</a>
+      <a class="button" routerLink="/services">See what we do <span aria-hidden="true">↗</span></a>
+      <a class="button button-light" routerLink="/contact">Volunteer with us</a>
+    </div>
+    <p class="hero-promise"><span aria-hidden="true">✓</span> Local voices. Shared decisions. Community-led action.</p>
+  </div>
+  <div class="hero-visual">
+    <img
+      class="hero-image"
+      ngSrc="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=1400&q=85"
+      width="1400"
+      height="1100"
+      priority
+      alt="Community members coming together to make a difference"
+    />
+    <div class="hero-photo-note">
+      <span class="photo-note-icon" aria-hidden="true">✳</span>
+      <p><strong>Led by people.</strong><br />Rooted in community.</p>
     </div>
   </div>
-  <span class="hero-note">Local roots. Shared possibilities.</span>
 </section>
 
 <section class="mission-section" aria-labelledby="mission-title">
-  <div class="mission-ornament" aria-hidden="true">“</div>
-  <p class="eyebrow">The heart of RRNGO</p>
-  <h2 id="mission-title">Good work starts by listening.</h2>
-  <p>
-    We believe lasting progress is built with people, not simply delivered to them. By listening first and
-    acting together, communities can shape solutions that reflect their strengths, priorities, and hopes.
-  </p>
-  <a class="text-link" routerLink="/about">Our approach <span aria-hidden="true">↗</span></a>
+  <div class="mission-mark" aria-hidden="true">“</div>
+  <div class="mission-copy">
+    <p class="eyebrow">Our belief</p>
+    <h2 id="mission-title">People closest to the challenge belong at the heart of the solution.</h2>
+    <p>
+      We listen first, then work side by side. Because lasting progress is strongest when communities
+      shape the decisions, priorities, and actions that affect their lives.
+    </p>
+    <a class="text-link" routerLink="/about">Get to know our approach <span aria-hidden="true">↗</span></a>
+  </div>
+</section>
+
+<section class="approach-section" aria-labelledby="approach-title">
+  <div class="section-heading">
+    <p class="eyebrow">How change takes root</p>
+    <h2 id="approach-title">Good work is done with people, not for them.</h2>
+    <p>We build trust over time and let community priorities guide each step.</p>
+  </div>
+  <div class="approach-steps">
+    <article>
+      <span class="step-number">01</span>
+      <div><h3>Listen</h3><p>Start with local voices, lived experience, and the strengths already in a community.</p></div>
+    </article>
+    <article>
+      <span class="step-number">02</span>
+      <div><h3>Work together</h3><p>Shape practical responses side by side, with dignity, care, and shared purpose.</p></div>
+    </article>
+    <article>
+      <span class="step-number">03</span>
+      <div><h3>Keep learning</h3><p>Reflect, adapt, and grow solutions that belong to the people they serve.</p></div>
+    </article>
+  </div>
+</section>
+
+<section class="founder-section" aria-labelledby="founder-title">
+  <div class="founder-mark" aria-hidden="true">“</div>
+  <div class="founder-message">
+    <p class="eyebrow">A message from our founder</p>
+    <h2 id="founder-title">
+      “Real change begins when we listen to one another and make space for communities to lead.”
+    </h2>
+    <p class="founder-name">[Founder name]</p>
+    <p class="founder-note">Sample message — replace with the founder’s approved words and name.</p>
+  </div>
 </section>
 
 <section class="work-section" aria-labelledby="work-title">
   <div class="section-heading">
-    <p class="eyebrow">Where we focus</p>
-    <h2 id="work-title">Practical support. Shared purpose.</h2>
-    <p>We bring people together around the things that help a community thrive.</p>
+    <p class="eyebrow">Our areas of focus</p>
+    <h2 id="work-title">Working together for stronger communities.</h2>
+    <p>Our work grows around the priorities people identify in their own communities.</p>
   </div>
   <div class="work-cards">
     <article class="work-card work-card-image">
@@ -49,7 +90,7 @@
         alt="Children learning together in a classroom"
       />
       <div class="work-card-body">
-        <span class="card-number">01</span>
+        <span class="card-number">01 <span>Opportunity</span></span>
         <h3>Learning &amp; opportunity</h3>
         <p>Creating space for curiosity, skills, and pathways to a brighter future.</p>
         <a class="text-link" routerLink="/services" aria-label="Explore learning and opportunity work">Explore <span aria-hidden="true">↗</span></a>
@@ -64,7 +105,7 @@
         alt="Volunteers preparing supplies for a community"
       />
       <div class="work-card-body">
-        <span class="card-number">02</span>
+        <span class="card-number">02 <span>Wellbeing</span></span>
         <h3>Care &amp; wellbeing</h3>
         <p>Supporting everyday wellbeing with care shaped around local needs.</p>
         <a class="text-link" routerLink="/services" aria-label="Explore care and wellbeing work">Explore <span aria-hidden="true">↗</span></a>
@@ -79,13 +120,54 @@
         alt="Community members sharing ideas around a table"
       />
       <div class="work-card-body">
-        <span class="card-number">03</span>
+        <span class="card-number">03 <span>Resilience</span></span>
         <h3>Community resilience</h3>
         <p>Strengthening local connections so people can shape change together.</p>
         <a class="text-link" routerLink="/services" aria-label="Explore community resilience work">Explore <span aria-hidden="true">↗</span></a>
       </div>
     </article>
   </div>
+</section>
+
+<section class="work-photos" aria-labelledby="work-photos-title">
+  <div class="section-heading">
+    <p class="eyebrow">Moments of connection</p>
+    <h2 id="work-photos-title">A glimpse of community in action.</h2>
+    <p>These demo photos help show the spirit of our work. We look forward to sharing real moments from RRNGO.</p>
+  </div>
+  <div class="work-photo-grid">
+    <figure>
+      <img
+        ngSrc="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=900&q=80"
+        width="900"
+        height="700"
+        loading="lazy"
+        alt="Young people taking part in a group activity"
+      />
+      <figcaption><span>Learning together</span><small>Demo photo</small></figcaption>
+    </figure>
+    <figure>
+      <img
+        ngSrc="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=900&q=80"
+        width="900"
+        height="700"
+        loading="lazy"
+        alt="Volunteers preparing supplies for a community"
+      />
+      <figcaption><span>Showing up for one another</span><small>Demo photo</small></figcaption>
+    </figure>
+    <figure>
+      <img
+        ngSrc="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?auto=format&fit=crop&w=900&q=80"
+        width="900"
+        height="700"
+        loading="lazy"
+        alt="Community members meeting and sharing ideas"
+      />
+      <figcaption><span>Ideas grow together</span><small>Demo photo</small></figcaption>
+    </figure>
+  </div>
+  <p class="work-photo-note">Illustrative stock photos — replace with RRNGO photos and obtain consent before publishing.</p>
 </section>
 
 <section class="together-section" aria-labelledby="together-title">
@@ -97,16 +179,19 @@
       loading="lazy"
       alt="People joining hands as they work together"
     />
-    <span>Every contribution begins with care.</span>
+    <span>Progress is a shared effort.</span>
   </div>
   <div class="together-copy">
-    <p class="eyebrow">A shared journey</p>
-    <h2 id="together-title">There is room for everyone in the work of change.</h2>
+    <p class="eyebrow">Be part of the change</p>
+    <h2 id="together-title">Bring what you can. Help build what matters.</h2>
     <p>
       Bring your time, ideas, skills, or support. We can make a bigger difference when we stand alongside
       one another.
     </p>
-    <a class="button" routerLink="/donate">Find your way to help <span aria-hidden="true">↗</span></a>
+    <div class="hero-actions">
+      <a class="button" routerLink="/contact">Volunteer or partner <span aria-hidden="true">↗</span></a>
+      <a class="text-link" routerLink="/donate">Explore ways to give <span aria-hidden="true">↗</span></a>
+    </div>
   </div>
 </section>
 

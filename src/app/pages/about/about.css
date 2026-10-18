@@ -124,8 +124,11 @@
 
 .principle-grid article {
   padding: 1.5rem;
-  border-top: 2px solid var(--saffron);
-  background: var(--paper);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--saffron);
+  border-radius: 0.25rem var(--card-radius) var(--card-radius) var(--card-radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
 }
 
 .principle-grid article > span {
