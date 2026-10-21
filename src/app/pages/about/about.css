@@ -111,7 +111,7 @@
 
 .principles-section {
   padding: clamp(4rem, 8vw, 7rem) clamp(1.25rem, 7vw, 7rem);
-  background: #f0ece2;
+  background: #f6f4ec;
 }
 
 .principle-grid {
@@ -125,7 +125,7 @@
 .principle-grid article {
   padding: 1.5rem;
   border: 1px solid var(--line);
-  border-top: 3px solid var(--saffron);
+  border-top: 4px solid #ffcf36;
   border-radius: 0.25rem var(--card-radius) var(--card-radius) var(--card-radius);
   background: var(--surface);
   box-shadow: var(--shadow-card);

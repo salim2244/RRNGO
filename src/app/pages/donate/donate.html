@@ -53,7 +53,19 @@
         collected on this page.
       </p>
     </div>
-    <span class="payment-status" role="status">Coming soon</span>
+    <div class="demo-payment">
+      <div class="demo-code-art" aria-hidden="true">
+        <span class="demo-code-stamp">DEMO</span>
+      </div>
+      <div class="demo-code-info">
+        <p class="eyebrow">Demo QR preview</p>
+        <p class="demo-code-value">{{ demoDonationCode() }}</p>
+        <p class="demo-code-warning">Not a payment QR and cannot be scanned. No payment can be made.</p>
+        <button class="demo-code-refresh" type="button" (click)="changeDemoDonationCode()">
+          Change demo letters
+        </button>
+      </div>
+    </div>
   </div>
 </section>
 

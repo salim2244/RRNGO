@@ -19,6 +19,19 @@ describe('App', () => {
 
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelectorAll('nav a')).toHaveLength(5);
+    expect(compiled.querySelector('.site-header .header-brand .brand-logo')).not.toBeNull();
+    const utilityBar = compiled.querySelector<HTMLElement>('.utility-bar');
+    expect(utilityBar?.textContent).toContain('hello@example.org');
+    expect(utilityBar?.textContent).toContain('+91 00000 00000');
+    expect(utilityBar?.textContent).toContain('REG-ABCD-1234');
+    expect(utilityBar?.textContent).toContain('PAN-ABCD-1234');
+    expect(utilityBar?.querySelector('a[href*="facebook.com"]')).not.toBeNull();
+    expect(utilityBar?.querySelector('a[href*="instagram.com"]')).not.toBeNull();
+    expect(utilityBar?.textContent).toContain('Volunteer');
+    expect(utilityBar?.textContent).toContain('Sample contact and legal details, and social links');
+    expect(compiled.querySelector('.site-header .header-cta')?.textContent).toContain('Donate now');
+    expect(compiled.querySelector('.site-header .header-cta')?.getAttribute('href')).toBe('/donate');
+    expect(compiled.querySelector('.legal-strip')).toBeNull();
 
     for (const [path, title] of [
       ['home', 'Change grows'],
@@ -56,5 +69,37 @@ describe('App', () => {
     fixture.detectChanges();
     expect(menuButton?.getAttribute('aria-expanded')).toBe('false');
     expect(navigation?.classList.contains('is-open')).toBe(false);
+  });
+
+  it('should show donation details 10 seconds after the first render', async () => {
+    vi.useFakeTimers();
+    const fixture = TestBed.createComponent(App);
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelectorAll('.brand-logo')).toHaveLength(2);
+    expect(compiled.querySelector('[role="dialog"]')).toBeNull();
+
+    await vi.advanceTimersByTimeAsync(9_999);
+    fixture.detectChanges();
+    expect(compiled.querySelector('[role="dialog"]')).toBeNull();
+
+    await vi.advanceTimersByTimeAsync(1);
+    fixture.detectChanges();
+
+    const dialog = compiled.querySelector<HTMLElement>('[role="dialog"]');
+    expect(dialog).not.toBeNull();
+    expect(dialog?.getAttribute('aria-modal')).toBe('true');
+    expect(dialog?.getAttribute('aria-labelledby')).toBe('donation-dialog-title');
+    expect(dialog?.textContent).toContain('Together, we can build a brighter tomorrow.');
+    expect(dialog?.querySelector('.donation-dialog-image img')).not.toBeNull();
+    expect(dialog?.querySelector('a[routerLink="/donate"]')?.textContent).toContain('Donate now');
+    expect(dialog?.querySelector('.demo-payment')).toBeNull();
+
+    dialog?.querySelector<HTMLButtonElement>('.dialog-close')?.click();
+    fixture.detectChanges();
+    expect(compiled.querySelector('[role="dialog"]')).toBeNull();
+    vi.useRealTimers();
   });
 });

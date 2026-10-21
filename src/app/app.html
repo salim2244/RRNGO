@@ -1,20 +1,30 @@
 <a class="skip-link" href="#main-content">Skip to content</a>
 
-<div class="legal-strip" aria-label="Organization registration placeholders">
-  <p><span>Registration No.</span> <strong>REG-ABCD-1234</strong></p>
-  <small>Sample details — replace before publishing</small>
-  <p><span>PAN</span> <strong>PAN-ABCD-1234</strong></p>
-</div>
-
-<div class="announcement">
-  <p>Lasting change starts with community voices.</p>
-  <a routerLink="/contact">Volunteer with us <span aria-hidden="true">↗</span></a>
+<div class="utility-bar">
+  <div class="utility-contact" aria-label="Contact placeholders">
+    <a href="mailto:hello@example.org">hello@example.org</a>
+    <a href="tel:+910000000000">+91 00000 00000</a>
+    <span class="utility-detail"><span>Reg. No.</span> <strong>REG-ABCD-1234</strong></span>
+    <span class="utility-detail"><span>PAN</span> <strong>PAN-ABCD-1234</strong></span>
+  </div>
+  <div class="utility-links">
+    <a routerLink="/contact">Volunteer <span aria-hidden="true">↗</span></a>
+    <a href="https://www.facebook.com/your-page" target="_blank" rel="noopener noreferrer">Facebook</a>
+    <a href="https://www.instagram.com/your-page" target="_blank" rel="noopener noreferrer">Instagram</a>
+  </div>
+  <span class="utility-placeholder-note">Sample contact and legal details, and social links — replace before publishing</span>
 </div>
 
 <header class="site-header">
-  <a class="site-brand" routerLink="/home" aria-label="RRNGO home">
-    <span class="brand-mark" aria-hidden="true">R</span>
-    <span class="brand-copy"><strong>RRNGO</strong><small>Rooted in community</small></span>
+  <a class="site-brand header-brand" routerLink="/home" aria-label="RRNGO home">
+    <img
+      class="brand-logo"
+      ngSrc="/rr-trust-logo.jpeg"
+      width="762"
+      height="617"
+      priority
+      alt="RR Trust and Foundation"
+    />
   </a>
 
   <button
@@ -40,8 +50,48 @@
     <a routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contact</a>
   </nav>
 
-  <a class="button button-small header-cta" routerLink="/donate">Support our work <span aria-hidden="true">↗</span></a>
+  <a class="button button-small header-cta" routerLink="/donate">
+    Donate now <span aria-hidden="true">↗</span>
+  </a>
 </header>
+
+@if (donationDetailsOpen()) {
+  <div class="donation-overlay">
+    <section
+      class="donation-dialog"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="donation-dialog-title"
+    >
+      <button
+        class="dialog-close"
+        type="button"
+        aria-label="Close donation details"
+        (click)="closeDonationDetails()"
+      >
+        <span aria-hidden="true">×</span>
+      </button>
+      <div class="donation-dialog-image">
+        <img
+          ngSrc="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=1600&q=85"
+          fill
+          priority
+          alt="Children learning together in a classroom"
+        />
+      </div>
+      <div class="donation-dialog-content">
+        <h2 id="donation-dialog-title">Together, we can build a brighter tomorrow.</h2>
+        <p>
+          Every act of care can help create more opportunity. Explore ways to stand alongside
+          communities and support work shaped by their voices.
+        </p>
+        <a class="button dialog-donate" routerLink="/donate" (click)="closeDonationDetails()">
+          Donate now <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+  </div>
+}
 
 <main id="main-content">
   <router-outlet />
@@ -51,8 +101,14 @@
   <div class="footer-top">
     <div class="footer-brand">
       <a class="site-brand" routerLink="/home" aria-label="RRNGO home">
-        <span class="brand-mark" aria-hidden="true">R</span>
-        <span class="brand-copy"><strong>RRNGO</strong><small>Rooted in community</small></span>
+        <img
+          class="brand-logo footer-logo"
+          ngSrc="/rr-trust-logo.jpeg"
+          width="762"
+          height="617"
+          loading="lazy"
+          alt="RR Trust and Foundation — Together for a Better Tomorrow"
+        />
       </a>
       <p>Standing alongside communities as they shape a more caring, resilient future.</p>
     </div>
